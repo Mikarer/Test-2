@@ -27,6 +27,7 @@
 							<p>Profil</p>
 						</header>
 						<hr />
+						<!-- Input with type button added to toggle content, use function toggle() from script-->
 						<input id="clickMe" type="button" value="Hide Form" onclick="toggle();"  style="margin-bottom: 10px"/>
 						<div id="toggle">
 							<h2>Extra Stuff!</h2>
@@ -87,6 +88,9 @@
 					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
 					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
 				}
+				// BokiGaja - this function will be called when input 'toggle' is clicked. It will take display status from document where id = 'toggle'
+				// if display is not 'none' it will change it to none and change text of button to 'Show Form'
+				// In other case it will change display to 'block' and edit button text to 'Hide Form'
 				toggle = function () {
 					displayStatus = document.getElementById("toggle");
 					if (displayStatus.style.display !== "none") {
